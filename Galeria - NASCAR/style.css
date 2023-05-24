@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow: hidden;
+    display: grid;
+    height: 100vh; 
+    grid-template-rows: 90px 1fr 150px;
+    margin: 0px 100px; 
+    font-family: 'Pangolin', cursive;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(9, 1, 1);
+}
+
+  h1 {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: red;
+  }
+  
+  p + p {
+    color: rgb(111, 42, 42);
+    margin-left: 20px;
+  }
+  
+  main {
+    display: grid;
+    grid-template-rows: 4fr 2fr;
+    gap: 15px;
+    animation: zoomIn 1s ease-in-out;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .fotos1 {
+    display: grid;
+    grid-template-areas: 
+      "principal secundaria"
+      "principal secundaria";
+    gap: 15px;
+    grid-template-columns: 7fr 6fr;
+  }
+  
+  .fotos1c {
+    grid-area: principal;
+    background-image: url(https://www.tricurioso.com/wp-content/uploads/2018/11/fatos-curiosos-sobre-a-nascar-3.jpg);
+    background-size: cover;
+    border: 2px solid red; 
+    display: flex; 
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+
+  
+  .img__secundaria {
+    grid-area: secundaria;
+    display: grid;
+    grid-template-areas: 
+      "img1 img2"
+      "img3 img4";
+    column-gap: 15px;
+    row-gap: 15px;
+  }
+  
+  .img__secundaria > * {
+    border: 2px solid red; 
+  }
+  
+  .img1 {
+    background-image: url(https://womotor.files.wordpress.com/2021/11/nascar-kyle-larson-patrocinio.jpg?w=816);
+    background-size: cover;
+    grid-area: img1;
+  }
+
+.img2{
+    background-image: url(https://phantom-marca.unidadeditorial.es/3e339532338a805aa17e6e20049a3863/resize/1320/f/jpg/assets/multimedia/imagenes/2022/08/22/16611564006302.jpg);
+    background-size: cover;
+    grid-area: img2;
+
+}
+
+.img3{
+    background-image: url(https://canalnapista.com/wp-content/uploads/2021/05/Next-Gen-Mustagn-traseira-1024x683.jpg);
+    background-size: cover;
+    grid-area: img3;
+}
+
+.img4{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx8bdNhCNZ8jy3h5tLOZZ3H11Ji0Y6YrvNJ5PoqxPdZ1rIYReU7FKbljXBqyarmrrC2Ks&usqp=CAU);
+    background-size: cover;
+    grid-area: img4;
+}
+
+.faixa__secundaria{
+    display: grid;
+    column-gap: 15px;
+    grid-template-columns: 2fr 2fr 3fr;
+}
+.faixa__secundaria > *{
+    border-style: solid;
+    border-color: red;
+  }
+
+  .img5{
+    background-image: url(https://cdn-5.motorsport.com/images/amp/0mbj7kG2/s6/2019-monster-energy-nascar-cup.jpg);
+    background-size: cover;
+}
+
+.img6{
+    background-image: url(https://womotor.files.wordpress.com/2021/07/nascar-novo-carro-next-gen.jpg?w=1200);
+    background-size: cover;
+}
+
+.img7{
+    background-image: url(https://canalnapista.com/wp-content/uploads/2021/05/Next-Gen-Camry-lado-direito-3-1024x683.jpg);
+    background-size: cover;
+}   
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ver__mais{
+    border-radius: 50px;
+    background-color: #210909;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+}
+.ver__mais:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  
+
+.ver__mais p{
+    color: rgb(234, 12, 12);
+}
+.fotos1c:hover, .img1:hover, .img2:hover, .img3:hover, .img4:hover, .img5:hover, .img6:hover, .img7:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
